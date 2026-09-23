@@ -1,206 +1,395 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Politique de confidentialité des applications éducatives Plume et Pi.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Politique de confidentialité – Plume et Pi</title>
+
+  <meta
+    name="description"
+    content="Politique de confidentialité des applications éducatives Plume et Pi."
+  >
+
   <style>
-    :root {
-      color-scheme: light;
-      --background: #f5f7fb;
-      --surface: #ffffff;
-      --text: #18212f;
-      --muted: #566173;
-      --accent: #3157c8;
-      --border: #dce2ec;
-    }
-
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #202124;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 17px;
       line-height: 1.65;
     }
 
-    main {
-      width: min(860px, calc(100% - 32px));
+    .page {
+      max-width: 850px;
       margin: 40px auto;
-      padding: clamp(24px, 5vw, 56px);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(24, 33, 47, 0.08);
+      padding: 50px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
-    h1, h2 { line-height: 1.25; }
-    h1 { margin-top: 0; font-size: clamp(2rem, 5vw, 3rem); }
-    h2 { margin-top: 2.2rem; font-size: 1.35rem; }
-    p, li { max-width: 75ch; }
-    a { color: var(--accent); }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #173c72;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin-top: 38px;
+      margin-bottom: 12px;
+      color: #173c72;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    a {
+      color: #245fc5;
+    }
+
     code {
-      padding: 0.15rem 0.35rem;
-      background: #eef2ff;
-      border-radius: 5px;
+      padding: 3px 6px;
+      background-color: #edf1f5;
+      border-radius: 4px;
       overflow-wrap: anywhere;
     }
-    .subtitle { color: var(--muted); font-size: 1.05rem; }
-    .notice {
-      padding: 16px 18px;
-      border-left: 4px solid var(--accent);
-      background: #f1f4ff;
-      border-radius: 8px;
+
+    .brand {
+      margin-bottom: 8px;
+      color: #596579;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
+
+    .date {
+      margin-top: 0;
+      color: #596579;
+    }
+
+    .summary {
+      margin: 30px 0;
+      padding: 20px;
+      background-color: #edf4ff;
+      border-left: 5px solid #245fc5;
+      border-radius: 6px;
+    }
+
     footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.95rem;
+      margin-top: 45px;
+      padding-top: 20px;
+      color: #596579;
+      border-top: 1px solid #d8dde5;
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        background-color: #ffffff;
+        font-size: 16px;
+      }
+
+      .page {
+        margin: 0;
+        padding: 25px 20px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main>
+  <main class="page">
+
     <header>
-      <p class="subtitle">Plume et Pi · Applications éducatives</p>
+      <div class="brand">Plume et Pi</div>
       <h1>Politique de confidentialité</h1>
-      <p><strong>Dernière mise à jour : 23 septembre 2026</strong></p>
+      <p class="date">
+        Dernière mise à jour : 23 septembre 2026
+      </p>
     </header>
 
-    <p class="notice">
-      Les applications Plume et Pi sont conçues pour fonctionner hors connexion,
+    <section class="summary">
+      <strong>En résumé :</strong>
+      les applications Plume et Pi fonctionnent hors connexion,
       sans compte, sans publicité et sans collecte de données personnelles.
-    </p>
+    </section>
 
-    <h2>1. Éditeur</h2>
-    <p>
-      Les applications couvertes par cette politique sont publiées par
-      <strong>Thibault Vermot</strong>, sous le nom <strong>Plume et Pi</strong>, en France.
-    </p>
+    <section>
+      <h2>1. Éditeur</h2>
 
-    <h2>2. Applications concernées</h2>
-    <ul>
-      <li>
-        <strong>Les Automatismes – Maths 6e</strong><br>
-        Nom de package : <code>fr.thibaultvermot.automatismes6e</code>
-      </li>
-    </ul>
-    <p>Les futures applications couvertes seront ajoutées explicitement à cette liste.</p>
+      <p>
+        Les applications couvertes par cette politique sont publiées par
+        <strong>Thibault Vermot</strong>, sous le nom
+        <strong>Plume et Pi</strong>, en France.
+      </p>
+    </section>
 
-    <h2>3. Données personnelles</h2>
-    <p>
-      Les applications Plume et Pi ne collectent, ne transmettent et ne partagent
-      aucune donnée personnelle. Elles ne nécessitent aucune création de compte et
-      ne demandent notamment aucun nom, âge, adresse électronique, numéro de téléphone,
-      emplacement géographique, contact ou identifiant publicitaire.
-    </p>
+    <section>
+      <h2>2. Applications concernées</h2>
 
-    <h2>4. Données enregistrées localement</h2>
-    <p>
-      Certaines informations pédagogiques peuvent être enregistrées uniquement sur
-      l'appareil : scores, progression, réponses correctes ou incorrectes, domaines à
-      retravailler, records et préférences d'utilisation.
-    </p>
-    <p>Ces informations :</p>
-    <ul>
-      <li>restent dans l'espace de stockage privé de l'application ;</li>
-      <li>ne sont pas associées à l'identité de l'utilisateur ;</li>
-      <li>ne sont envoyées à aucun serveur ;</li>
-      <li>ne sont accessibles ni à Plume et Pi ni à des tiers ;</li>
-      <li>ne sont ni vendues ni partagées.</li>
-    </ul>
-    <p>
-      Elles peuvent être supprimées en effaçant les données de l'application dans les
-      paramètres Android ou en désinstallant l'application.
-    </p>
+      <ul>
+        <li>
+          <strong>Les Automatismes – Maths 6e</strong><br>
+          Nom de package :
+          <code>fr.thibaultvermot.automatismes6e</code>
+        </li>
+      </ul>
 
-    <h2>5. Publicité, suivi et services externes</h2>
-    <p>
-      Les applications Plume et Pi ne contiennent aucune publicité, aucun outil
-      d'analyse externe, aucun mécanisme de suivi, aucun système de profilage et aucun
-      réseau publicitaire. Elles ne proposent ni abonnement ni achat intégré.
-    </p>
+      <p>
+        Les futures applications couvertes par cette politique seront ajoutées
+        explicitement à cette liste.
+      </p>
+    </section>
 
-    <h2>6. Connexion à Internet et liens externes</h2>
-    <p>
-      Les fonctionnalités pédagogiques fonctionnent entièrement hors connexion. Si
-      l'utilisateur choisit d'ouvrir un lien externe, notamment celui de cette politique,
-      le lien est ouvert par le navigateur ou par une autre application du système. Ce
-      service extérieur applique alors sa propre politique de confidentialité.
-    </p>
+    <section>
+      <h2>3. Données personnelles</h2>
 
-    <h2>7. Achat sur Google Play</h2>
-    <p>
-      Certaines applications peuvent être proposées sous la forme d'un achat unique.
-      Le paiement et la gestion de la transaction sont assurés par Google Play. Plume et
-      Pi n'accède pas aux coordonnées bancaires de l'acheteur.
-    </p>
-    <p>
-      Google peut traiter certaines informations relatives au téléchargement, à l'achat,
-      au fonctionnement du Play Store ou aux diagnostics conformément à ses propres règles.
-      Ces traitements sont réalisés par Google et non par les applications Plume et Pi.
-    </p>
+      <p>
+        Les applications Plume et Pi ne collectent, ne transmettent et ne
+        partagent aucune donnée personnelle.
+      </p>
 
-    <h2>8. Protection des enfants</h2>
-    <p>
-      Certaines applications Plume et Pi sont destinées aux enfants. Elles ne proposent
-      aucune messagerie, aucune interaction entre utilisateurs, aucun contenu publié par
-      les utilisateurs, aucun partage social intégré et aucune géolocalisation.
-    </p>
-    <p>
-      Aucune donnée personnelle concernant un enfant n'est demandée, collectée ou transmise.
-    </p>
+      <p>
+        Elles ne nécessitent aucune création de compte et ne demandent
+        notamment aucun :
+      </p>
 
-    <h2>9. Autorisations Android</h2>
-    <p>
-      Les applications ne demandent aucune autorisation Android non indispensable à leur
-      fonctionnement. Si une future version introduisait une nouvelle autorisation ou un
-      traitement de données, cette politique serait mise à jour avant sa diffusion.
-    </p>
+      <ul>
+        <li>nom ou prénom ;</li>
+        <li>âge ou date de naissance ;</li>
+        <li>adresse postale ;</li>
+        <li>adresse électronique ;</li>
+        <li>numéro de téléphone ;</li>
+        <li>emplacement géographique ;</li>
+        <li>contact ;</li>
+        <li>identifiant publicitaire ;</li>
+        <li>moyen de paiement.</li>
+      </ul>
 
-    <h2>10. Conservation, sécurité et suppression</h2>
-    <p>
-      Plume et Pi ne recevant aucune donnée issue des applications, aucune base de données
-      personnelle n'est conservée par l'éditeur. Les informations pédagogiques locales
-      restent sur l'appareil jusqu'à leur effacement par l'utilisateur ou jusqu'à la
-      désinstallation de l'application.
-    </p>
+      <p>Aucun profil utilisateur n’est créé.</p>
+    </section>
 
-    <h2>11. Droits des utilisateurs</h2>
-    <p>
-      Plume et Pi ne détient aucune donnée personnelle provenant des applications à
-      consulter, rectifier, transmettre ou supprimer. Pour supprimer les résultats et
-      préférences conservés localement, l'utilisateur peut effacer les données de
-      l'application dans les paramètres Android ou désinstaller celle-ci.
-    </p>
+    <section>
+      <h2>4. Données pédagogiques enregistrées localement</h2>
 
-    <h2>12. Modification de cette politique</h2>
-    <p>
-      Cette politique pourra être actualisée afin de tenir compte d'une nouvelle
-      application, d'une évolution fonctionnelle ou d'une modification réglementaire.
-      La version en vigueur restera accessible à cette adresse.
-    </p>
+      <p>
+        Certaines informations nécessaires au fonctionnement pédagogique
+        peuvent être enregistrées uniquement sur l’appareil :
+      </p>
 
-    <h2>13. Contact</h2>
-    <p>
-      Pour toute question concernant cette politique ou les applications Plume et Pi :
-    </p>
-    <p>
-      <strong>Plume et Pi</strong><br>
-      Responsable : Thibault Vermot<br>
-      France<br>
-      Courriel : <a href="mailto:VOTRE-ADRESSE-EMAIL">VOTRE-ADRESSE-EMAIL</a>
-    </p>
+      <ul>
+        <li>scores obtenus ;</li>
+        <li>nombre de sessions réalisées ;</li>
+        <li>réponses correctes ou incorrectes ;</li>
+        <li>domaines à retravailler ;</li>
+        <li>progression et records ;</li>
+        <li>préférences de chronométrage ou d’affichage.</li>
+      </ul>
+
+      <p>Ces informations :</p>
+
+      <ul>
+        <li>restent dans l’espace privé de l’application ;</li>
+        <li>ne sont pas associées à l’identité de l’utilisateur ;</li>
+        <li>ne sont envoyées à aucun serveur ;</li>
+        <li>ne sont accessibles ni à Plume et Pi ni à des tiers ;</li>
+        <li>ne sont ni vendues ni partagées.</li>
+      </ul>
+
+      <p>
+        Elles peuvent être supprimées en effaçant les données de l’application
+        dans les paramètres Android ou en désinstallant l’application.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Publicité, suivi et services externes</h2>
+
+      <p>Les applications Plume et Pi ne contiennent :</p>
+
+      <ul>
+        <li>aucune publicité ;</li>
+        <li>aucun outil d’analyse externe ;</li>
+        <li>aucun dispositif de suivi ;</li>
+        <li>aucun système de profilage ;</li>
+        <li>aucun réseau publicitaire ;</li>
+        <li>aucun abonnement ;</li>
+        <li>aucun achat intégré.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Connexion à Internet et liens externes</h2>
+
+      <p>
+        Les fonctionnalités pédagogiques fonctionnent entièrement hors
+        connexion.
+      </p>
+
+      <p>
+        Si l’utilisateur choisit d’ouvrir un lien externe, notamment le lien
+        vers cette politique de confidentialité, celui-ci est ouvert par le
+        navigateur ou par une autre application du système. Le service extérieur
+        concerné applique alors sa propre politique de confidentialité.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Achat sur Google Play</h2>
+
+      <p>
+        Certaines applications Plume et Pi peuvent être proposées sous la forme
+        d’un achat unique sur Google Play.
+      </p>
+
+      <p>
+        Le paiement et la gestion de la transaction sont assurés directement
+        par Google Play. Plume et Pi n’accède pas aux coordonnées bancaires de
+        l’acheteur.
+      </p>
+
+      <p>
+        Google peut traiter certaines informations relatives au téléchargement,
+        à l’achat, au fonctionnement du Play Store ou aux diagnostics,
+        conformément à ses propres règles de confidentialité. Ces traitements
+        sont réalisés par Google et non par les applications Plume et Pi.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Protection des enfants</h2>
+
+      <p>
+        Certaines applications Plume et Pi sont destinées aux enfants.
+        Elles sont conçues sans :
+      </p>
+
+      <ul>
+        <li>création de compte ;</li>
+        <li>collecte de données personnelles ;</li>
+        <li>publicité ;</li>
+        <li>messagerie ;</li>
+        <li>interaction entre utilisateurs ;</li>
+        <li>contenu publié par les utilisateurs ;</li>
+        <li>partage social intégré ;</li>
+        <li>géolocalisation.</li>
+      </ul>
+
+      <p>
+        Aucune donnée personnelle concernant un enfant n’est demandée,
+        collectée ou transmise.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Autorisations Android</h2>
+
+      <p>
+        Les applications Plume et Pi ne demandent aucune autorisation Android
+        non indispensable à leur fonctionnement.
+      </p>
+
+      <p>
+        Si une future version introduisait une nouvelle autorisation ou un
+        traitement de données, cette politique serait mise à jour avant sa
+        diffusion.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Conservation, sécurité et suppression</h2>
+
+      <p>
+        Plume et Pi ne recevant aucune donnée provenant des applications,
+        aucune base de données personnelle n’est conservée par l’éditeur.
+      </p>
+
+      <p>
+        Les informations pédagogiques locales restent sur l’appareil jusqu’à
+        leur effacement par l’utilisateur ou jusqu’à la désinstallation de
+        l’application.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Droits des utilisateurs</h2>
+
+      <p>
+        Plume et Pi ne détient aucune donnée personnelle provenant des
+        applications à consulter, rectifier, transmettre ou supprimer.
+      </p>
+
+      <p>
+        Pour supprimer les résultats et les préférences enregistrés localement,
+        l’utilisateur peut effacer les données de l’application dans les
+        paramètres Android ou désinstaller celle-ci.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Modification de cette politique</h2>
+
+      <p>
+        Cette politique peut être actualisée pour tenir compte d’une nouvelle
+        application, d’une évolution fonctionnelle ou d’une modification
+        réglementaire.
+      </p>
+
+      <p>
+        La date de la dernière mise à jour figure en haut de cette page.
+        La version en vigueur restera disponible à cette même adresse.
+      </p>
+    </section>
+
+    <section>
+      <h2>13. Contact</h2>
+
+      <p>
+        Pour toute question concernant cette politique ou les applications
+        Plume et Pi :
+      </p>
+
+      <p>
+        <strong>Plume et Pi</strong><br>
+        Responsable : Thibault Vermot<br>
+        France<br>
+        Courriel :
+        <a href="mailto:thvermot@gmail.com">
+          thvermot@gmail.com
+        </a>
+      </p>
+    </section>
 
     <footer>
       © 2026 Plume et Pi – Tous droits réservés.
     </footer>
+
   </main>
 </body>
 </html>
